@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(300deg, rgba(80,6,159,1) 0%, rgba(246,86,0,1) 69%);
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background: white;
+    margin: 20px;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .4s;
+    box-shadow: 1px 1px 10px rgb(189, 189, 189);
+    position: relative;
+    overflow: hidden;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(247, 247, 247);
+    z-index: 1;
+}
+.card::after{
+    content: 'TEMEL';
+    position: absolute;
+    top: 90px;
+    left: -30px;
+    width: 200px;
+    height: 40px;
+    background: rgb(231, 231, 231);
+    color: black;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    line-height: 40px;
+    text-align: center;
+    z-index: 15;
+    transition: all .4s;
+}
+.card:hover::after{
+    background: rgb(12, 192, 12);
+    color: white;
+}
+.card:nth-child(2)::after{
+    content: 'STANDART';
+}
+.card:nth-child(3)::after{
+    content: 'SINIRSIZ';
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card h2{
+    margin: 20px 0;
+    z-index: 10;
+}
+.card p{
+    margin: 10px 0;
+}
+.btn{
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+    background: rgb(12, 192, 12);
+    border: none;
+    color: white;
+    transition: all .4s;
+}
+.btn:hover{
+    background: rgb(12, 192, 12);
+}
